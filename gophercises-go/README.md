@@ -1,2 +1,0 @@
-# gophercises
-gophercises.com
