@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BEM - Block Element Modifier</title>
+    <style>
+        /*
+        https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/
+
+        .block {}
+        .block__element {}
+        .block--modifier {}
+
+        Ex:
+        .site-search {} // Block
+        .site-search__field {} // Element
+        .site-search--full {} // Modifier
+
+
+        https://cssguidelin.es/#bem-like-naming
+
+
+        https://www.smashingmagazine.com/2014/07/bem-methodology-for-small-projects/
+        - style a block container,
+        - style any block element,
+        - add style extras and overrides with a modifier.
+
+        Ex:
+        
+
+        BLOCK checkbox
+         ELEMENT tick-box
+         ELEMENT label
+
+        BLOCK radio
+         ELEMENT radio-button
+         ELEMENT label
+
+        BLOCK select
+        MOD disabled
+        MOD multiple
+         ELEMENT optgroup
+         ELEMENT option
+          MOD disabled
+          MOD selected
+
+        https://css-tricks.com/bem-101/
+
+        Block component
+        .btn {}
+
+        Element that depends upon the block 
+        .btn__price {}
+
+        Modifier that changes the style of the block
+        .btn--orange {} 
+        .btn--big {}
+
+        Ex:
+
+        <a class="btn btn--big btn--orange" href="http://css-tricks.com">
+            <span class="btn__price">$9.99</span>
+            <span class="btn__text">Subscribe</span>
+        </a>
+        
+        */
+    </style>
+    <style>
+        .button {
+            display: inline-block;
+            border-radius: 3px;
+            padding: 7px 12px;
+            border: 1px solid #D5D5D5;
+            background-image: linear-gradient(#EEE, #DDD);
+            font: 700 13px/18px Helvetica, arial;
+        }
+
+        .button--state-success {
+            color: #FFF;
+            background: #569E3D linear-gradient(#79D858, #569E3D) repeat-x;
+            border-color: #4A993E;
+        }
+
+        .button--state-danger {
+            color: #900;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Buttons</h1>
+    <button class="button">Normal button</button>
+    <button class="button button--state-success">Success button</button>
+    <button class="button button--state-danger">Danger button</button>
+
+    
+</body>
+
+</html>
